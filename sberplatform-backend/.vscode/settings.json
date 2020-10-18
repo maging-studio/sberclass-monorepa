@@ -1,0 +1,13 @@
+{
+    "prettier.tslintIntegration": true,
+    "prettier.eslintIntegration": true,
+    "eslint.validate": [
+        "json",
+         "javascript",
+         {"language": "typescript", "autoFix": true },
+         {"language": "typescriptreact", "autoFix": true }
+    ],
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "autoimport.showNotifications": true,
+}

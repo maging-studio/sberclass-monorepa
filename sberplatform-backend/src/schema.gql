@@ -1,0 +1,120 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CmsBlock {
+  _id: ID!
+  data: JSON!
+  type: String!
+}
+
+input CmsBlockIn {
+  data: JSON
+  type: String!
+}
+
+type CmsDeclaration {
+  _id: ID!
+  blocks: [CmsBlock!]!
+  time: Float!
+  version: String!
+}
+
+input CmsDeclarationIn {
+  blocks: [CmsBlockIn!]
+  time: Float!
+  version: String!
+}
+
+type EducationField {
+  name: String!
+}
+
+input EducationFieldIn {
+  name: String!
+}
+
+type EducationMeta {
+  level: Float!
+  required: Boolean!
+}
+
+input EducationMetaIn {
+  level: Float!
+  required: Boolean!
+}
+
+type EducationModule {
+  _id: ID!
+  description: String
+  field: EducationField!
+  name: String!
+  topics: [Topic!]!
+}
+
+input EducationModuleIn {
+  description: String
+  field: EducationFieldIn!
+  name: String!
+  topics: [TopicIn!]
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON @specifiedBy(url: "http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf")
+
+type Mutation {
+  addTasksGroup(tasksGroup: TaskGroupIn!): EducationModule!
+  addTopic(topic: TopicIn!): EducationModule!
+  create(educationModule: EducationModuleIn!): EducationModule!
+  update(data: EducationModuleIn!, moduleId: String!): EducationModule!
+  updateTasksGroup(tasksGroup: TaskGroupIn!): EducationModule!
+}
+
+type Query {
+  educationModule(id: String!): EducationModule!
+  educationModules: [EducationModule!]!
+  user(id: String!): User!
+}
+
+type TaskGroup {
+  _id: ID!
+  content: CmsDeclaration!
+  description: String
+  educationMeta: EducationMeta!
+  name: String!
+}
+
+input TaskGroupIn {
+  content: CmsDeclarationIn
+  description: String
+  educationMeta: EducationMetaIn
+  name: String!
+}
+
+type Topic {
+  _id: ID!
+  description: String
+  educationMeta: EducationMeta!
+  name: String!
+  taskGroups: [TaskGroup!]!
+}
+
+input TopicIn {
+  description: String
+  educationMeta: EducationMetaIn
+  name: String!
+  taskGroups: [TaskGroupIn!]
+}
+
+type User {
+  _id: String!
+  confirmed: Boolean!
+  email: String!
+  firstName: String!
+  lastName: String!
+  login: String!
+  middleName: String!
+  phone: String!
+}

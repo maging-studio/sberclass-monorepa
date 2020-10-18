@@ -1,0 +1,38 @@
+query educationModule($id: String!) {
+    educationModule(id: $id){
+        _id
+        description
+        field{
+            name
+        }
+        name
+        topics{
+            _id
+            description
+            educationMeta{
+                level
+                required
+            }
+            name
+            taskGroups{
+                _id
+                content{
+                    _id
+                    blocks{
+                        _id
+                        data
+                        type
+                    }
+                    time
+                    version
+                }
+                description
+                educationMeta{
+                    level
+                    required
+                }
+                name
+            }
+        }
+    }
+}

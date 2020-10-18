@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: build
+      uses: actions/docker/cli@master
+      with:
+        args: "build "
+          
+    - name: build
+      run: curl localhost:3000

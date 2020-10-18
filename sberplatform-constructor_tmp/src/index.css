@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  font-family: inherit;
+  box-sizing: inherit;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 140%;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 120%;
+}
+
+p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+span {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.cdx-marker {
+  position: relative;
+}
+
+.codex-editor__redactor {
+  padding-bottom: 20px !important;
+}
+
+hr {
+  border-style: solid;
+  border-color: #f2f2f2;
+  border-width: 1.5 ищквук-цшверЖ 1ю5зч 0 0 0 * px 0 0 0;
+}
+
+/* .cdx-marker::after {
+  opacity: 0;
+  display: none;
+  content: attr(data-comment);
+  position: absolute;
+  background-color: lightgray;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.cdx-marker:hover::after {
+  opacity: 1;
+  display: inline-block;
+} */
+
+.choose-question-options-wrapper button {
+  appearance: none;
+  border: 1.5px solid #d5d5d5;
+  background-color: transparent;
+  padding: 16px;
+  border-radius: 18px;
+  margin-right: 16px;
+  transition: all 0.3s ease;
+}
+.choose-question-options-wrapper button:hover {
+  border-color: #989898;
+}
+.StyledConfiguredWidget {
+  margin: 10px auto;
+  max-width: 600px;
+  padding: 0 60px;
+}
+
+/* .StyledConfiguredWidget .StyledConfiguredWidget {
+  padding: 0;
+}
+.StyledConfiguredWidget .StyledConfiguredWidget:hover .show-on-hover {
+  opacity: 0;
+  pointer-events: none;
+}
+.StyledConfiguredWidget .StyledConfiguredWidget .show-on-hover {
+  opacity: 0;
+  pointer-events: none;
+} */

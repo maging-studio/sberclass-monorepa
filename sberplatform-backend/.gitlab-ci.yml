@@ -1,0 +1,20 @@
+docker-build-master:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - source ./.env
+    - ./scripts/publish-docker.sh
+  only:
+    - master
+
+deploy_prod:
+  image: google/cloud-sdk
+  stage: deploy
+  script:
+    -  source ./.env
+    - ./scripts/setup-key.sh
+    - ./scripts/deploy-docker-pull.sh
+  only:
+  - master

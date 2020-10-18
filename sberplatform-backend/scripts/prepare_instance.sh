@@ -1,0 +1,1 @@
+sudo ./mqtt/prepare_instance.sh
